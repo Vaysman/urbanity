@@ -57,4 +57,4 @@ production:
   database: urbanity_production
   pool: 5
   username: urbanity
-  password: password
+  password:
