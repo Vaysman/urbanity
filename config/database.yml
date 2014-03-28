@@ -56,5 +56,3 @@ production:
   encoding: unicode
   database: urbanity_production
   pool: 5
-  username: urbanity
-  password:
