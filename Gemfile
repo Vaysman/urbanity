@@ -45,3 +45,5 @@ gem "rails_12factor", group: :production
 gem "haml-rails"
 gem "devise"
 gem "dotenv-rails", :groups => [:development, :test]
+gem "newrelic_rpm"
+gem "thin"
