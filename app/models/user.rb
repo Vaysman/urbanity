@@ -6,6 +6,4 @@ class User < ActiveRecord::Base
 
 
   has_one :player
-  has_many :team_members
-  has_many :teams, through: :team_members
 end
