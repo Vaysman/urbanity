@@ -40,10 +40,10 @@ end
 # Use debugger
 # gem "debugger", group: [:development, :test]
 
-gem "bootstrap-sass", "~> 3.1.1"
+gem "bootstrap-sass", "~> 3.1"
 gem "rails_12factor", group: :production
-gem "haml-rails"
-gem "devise"
-gem "dotenv-rails", :groups => [:development, :test]
-gem "newrelic_rpm"
-gem "thin"
+gem "haml-rails", "~> 0.5"
+gem "devise", "~> 3.2"
+gem "dotenv-rails", "~> 0.10", :groups => [:development, :test]
+gem "newrelic_rpm", "~> 3.7"
+gem "thin", "~> 1.6"
