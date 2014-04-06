@@ -5,9 +5,9 @@
 /* FONT PATH
  * -------------------------- */
 @font-face {
-  font-family: 'FontAwesome';
-  src: url('https://netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts/fontawesome-webfont.eot?v=4.0.3');
-  src: url('https://netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts/fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'), url('https://netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts/fontawesome-webfont.woff?v=4.0.3') format('woff'), url('https://netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts/fontawesome-webfont.ttf?v=4.0.3') format('truetype'), url('https://netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg');
+  font-family: FontAwesome;
+  src: url(https://netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts/fontawesome-webfont.eot?v=4.0.3);
+  src: url(https://netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts/fontawesome-webfont.eot?#iefix&v=4.0.3) format(embedded-opentype), url(https://netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts/fontawesome-webfont.woff?v=4.0.3) format(woff), url(https://netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts/fontawesome-webfont.ttf?v=4.0.3) format(truetype), url(https://netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular) format(svg);
   font-weight: normal;
   font-style: normal;
 }
@@ -1337,17 +1337,17 @@
   content: "\f196";
 }
 /*!
- * 
+ *
  * Cascade Design Framework v1.0
- * 
+ *
  * Cascade is Non-Free Software. You can purchase a license at http://cascade.io.
  * License: http://cascade.io/license
- * 
+ *
  * Copyright 2014 Studio Fellow LLC and respective owners. All Rights reserved unless otherwise noted.
  * Twitter Bootstrap, Font Awesome, jQuery, and other dependencies provide separate licenses and copyrights.
- * 
+ *
  * Designed and built with love and gratitude by Jarrod Drysdale, @studiofellow.
- * 
+ *
 */
 .module-padding {
   padding: 50px 0;
@@ -1405,37 +1405,37 @@
   -moz-osx-font-smoothing: grayscale;
 }
 .pattern-noise {
-  background-image: data-uri("/assets/pattern_noise.png");
+  background-image: url(<%= asset_data_uri "pattern_noise.png" %>);
 }
 .pattern-pinstripe {
-  background-image: data-uri("/assets/pattern_pinstripe.png");
+  background-image: url(<%= asset_data_uri "pattern_pinstripe.png" %>);
 }
 .pattern-pinstripe-tight {
-  background-image: data-uri("/assets/pattern_pinstripe-tight.png");
+  background-image: url(<%= asset_data_uri "pattern_pinstripe-tight.png" %>);
 }
 .pattern-pinstripe-loose {
-  background-image: data-uri("/assets/pattern_pinstripe-loose.png");
+  background-image: url(<%= asset_data_uri "pattern_pinstripe-loose.png" %>);
 }
 .pattern-noise-pinstripe {
-  background-image: data-uri("/assets/pattern_noise.png"), data-uri("/assets/pattern_pinstripe.png");
+  background-image: url(<%= asset_data_uri "pattern_noise.png" %>), url(<%= asset_data_uri "pattern_pinstripe.png" %>);
 }
 .pattern-noise-pinstripe-tight {
-  background-image: data-uri("/assets/pattern_noise.png"), data-uri("/assets/pattern_pinstripe-tight.png");
+  background-image: url(<%= asset_data_uri "pattern_noise.png" %>), url(<%= asset_data_uri "pattern_pinstripe-tight.png" %>);
 }
 .pattern-noise-pinstripe-loose {
-  background-image: data-uri("/assets/pattern_noise.png"), data-uri("/assets/pattern_pinstripe-loose.png");
+  background-image: url(<%= asset_data_uri "pattern_noise.png" %>), url(<%= asset_data_uri "pattern_pinstripe-loose.png" %>);
 }
 .bg-blur-a {
-  background-image: url("/assets/blur-a_blues.jpg") !important;
+  background-image: url(<%= asset_path "blur-a_blues.jpg" %>) !important;
 }
 .bg-blur-b {
-  background-image: url("/assets/blur-b_blues.jpg") !important;
+  background-image: url(<%= asset_path "blur-b_blues.jpg" %>) !important;
 }
 .bg-grainy-a {
-  background-image: url("/assets/grainy-a_blues.jpg") !important;
+  background-image: url(<%= asset_path "grainy-a_blues.jpg" %>) !important;
 }
 .bg-grainy-b {
-  background-image: url("/assets/grainy-b_blues.jpg") !important;
+  background-image: url(<%= asset_path "grainy-b_blues.jpg" %>) !important;
 }
 body div.merge-bottom {
   padding: 50px 0 0;
@@ -1454,7 +1454,7 @@ img {
 .graphicbox {
   background-position: left top;
   background-repeat: no-repeat;
-  background-image: url("/assets/blur-b_blues.jpg");
+  background-image: url(<%= asset_path "blur-b_blues.jpg" %>);
 }
 @media (min-width: 1200px) {
   .container {
@@ -2245,28 +2245,28 @@ body .module.inverse-ui {
   color: #313840;
 }
 @font-face {
-  font-family: 'Source Sans Pro';
+  font-family: Source Sans Pro;
   font-style: normal;
   font-weight: 300;
-  src: url(/assets/SourceSansPro-Light.woff) format('woff');
+  src: url(<%= asset_path "SourceSansPro-Light.woff" %>) format(woff);
 }
 @font-face {
-  font-family: 'Source Sans Pro';
+  font-family: Source Sans Pro;
   font-style: normal;
   font-weight: 400;
-  src: local('Source Sans Pro'), local('SourceSansPro-Regular'), url(/assets/SourceSansPro-Regular.woff) format('woff');
+  src: local(Source Sans Pro), local(SourceSansPro-Regular), url(<%= asset_path "SourceSansPro-Regular.woff" %>) format('woff');
 }
 @font-face {
   font-family: 'Source Sans Pro';
   font-style: normal;
   font-weight: 700;
-  src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(/assets/SourceSansPro-Bold.woff) format('woff');
+  src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(<%= asset_path "SourceSansPro-Bold.woff" %>) format('woff');
 }
 @font-face {
   font-family: 'Source Sans Pro';
   font-style: italic;
   font-weight: 400;
-  src: local('Source Sans Pro Italic'), local('SourceSansPro-It'), url(/assets/SourceSansPro-It.woff) format('woff');
+  src: local('Source Sans Pro Italic'), local('SourceSansPro-It'), url(<%= asset_path "SourceSansPro-It.woff" %>) format('woff');
 }
 @font-face {
   font-family: 'Source Sans Pro';
@@ -3062,7 +3062,7 @@ em {
   overflow: hidden;
   background-position: left top;
   background-repeat: no-repeat;
-  background-image: url("/assets/blur-b_blues.jpg");
+  background-image: url(<%= asset_path "blur-b_blues.jpg" %>);
 }
 .header-photo .logo {
   margin-bottom: 10px;
@@ -3093,7 +3093,7 @@ em {
 .header-photo:before {
   background-position: left top;
   background-repeat: no-repeat;
-  background-image: url("/assets/blur-b_blues.jpg");
+  background-image: url(<%= asset_path "blur-b_blues.jpg" %>);
   content: "";
   position: absolute;
   width: 1000px;
@@ -3468,7 +3468,7 @@ em {
   text-align: center;
   height: 275px;
   border-bottom: 1px solid #ffffff;
-  background-image: url("/assets/book_blues.png");
+  background-image: url(<%= asset_path "book_blues.png");
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: -165px -50px;
