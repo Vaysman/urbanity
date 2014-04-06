@@ -87,4 +87,13 @@ Urbanity::Application.configure do
     :authentication => :plain
   }
   config.action_mailer.delivery_method = :smtp
+
+  # config.assets.paths << Rails.root.join('vendor', 'assets')
+  config.assets.precompile.push(Proc.new do |path|
+    File.extname(path).in? [
+      '.html', '.erb', '.haml',                 # Templates
+      '.png',  '.gif', '.jpg', '.jpeg', '.svg', # Images
+      '.eot',  '.otf', '.svc', '.woff', '.ttf', # Fonts
+    ]
+  end)
 end
