@@ -4,7 +4,8 @@
       .col-sm-8.col-sm-offset-2
 
         %h1.headline Начни игру
-        %h4.summary Раньше организовать игру было не просто. Но теперь есть Urbanity.
+        %h4.summary Раньше организовать игру было не просто.
+        %h4.summary Но теперь есть Urbanity.
 
 .logo-graphicbox.inverse.pattern-noise
   .container
@@ -15,10 +16,10 @@
         %h4.tagline
           %em Начни играть уже сегодня
         %p
-          %a.btn(href="#")
+          %a.btn(href="#{new_user_registration_path}")
             %i.fa.fa-check-square-o
             ~ " Зарегестроваться"
-          %a.btn(href="#")
+          %a.btn(href="#{new_user_session_path}")
             %i.fa.fa-sign-in
             ~ " Войти"
 
@@ -29,76 +30,58 @@
 
     .stagger-graphicbox.row
       .graphicbox.col-sm-4
-        %i.fa.fa-envelope
+        %i.fa.fa-users
       .description.col-sm-7.col-sm-push-1
-        %h3.matching-color Revolutionize email? Why?!
-        %p Email is awesome! It doesn't need a redesign. Email just needs to get out of  |
-        the way of our work. Postal makes your email work for you, instead of the other  |
-        way around. It limits distractions without missing the important stuff
+        %h3.matching-color Команда? Это просто!
+        %p Организовать свою команду теперь очень просто!
+        Не хотите организовывать? Присединяйтесь к другой команде и станьте лучшим!
 
     .stagger-graphicbox.row
       .graphicbox.col-sm-4.col-sm-push-8
-        %i.fa.fa-clock-o
+        %i.fa.fa-calendar
       .description.col-sm-7.col-sm-pull-4
-        %h3.matching-color Cut your time spent in email
-        %p Instead of imagining all kinds of cool features that make email fancy, but    |
-        that actually make it more laborious, Postal works hard so you spend less time   |
-        using email. Postal is successful if you don't notice it working.
+        %h3.matching-color Запланировать игру
+        %p Планируйте ваши игры. Планируйте участи в играх организованных другими!
 
     .stagger-graphicbox.row
       .graphicbox.col-sm-4
-        %i.fa.fa-envelope"
+        %i.fa.fa-bar-chart-o
       .description.col-sm-7.col-sm-push-1
-        %h3.matching-color Revolutionize email? Why?!
-        %p Email is awesome! It doesn't need a redesign. Email just needs to get out of  |
-        the way of our work. Postal makes your email work for you, instead of the other  |
-        way around. It limits distractions without missing the important stuff
+        %h3.matching-color Статистика
+        %p Узнайте все о командах и игроках!
 
 .list-spread-narrow
   .container
     .row
-
       .panel1.col-sm-4.col-sm-offset-1
-        %h4.matching-color Urbanity does everything.
+        %h4.matching-color Urbanity помогает
         %ul
           %li
             %strong
-              Easy
-            email account setup
+              Легко
+            зарегестрироваться
           %li
-            Automagical
+            Легко
             %strong
-              tagging and archiving
-          %li
-            Intelligent
-            %em
-              filtering algorithms
+              создать и управлять игрой
 
       .panel2.col-sm-4.col-sm-offset-2
-        %h4.matching-color Email that works for you.
+        %h4.matching-color Urbanity освобождает
         %ul
           %li
             %strong
-              Easy
-            email account setup
+              Автоматическая
+            рассылка напоминаний
           %li
-            Automagical
+            Полностью
             %strong
-              tagging and archiving
-          %li
-            Intelligent
-            %em
-              filtering algorithms
+              открытый исходный код
 
 .banner-action.inverse-major.pattern-noise
   .container
-
-    %p
-      %a.btn(href="#")
-        Зарегестрироваться
-
-      %a.btn(href="#")
-        Войти
+    %h3 Остался один шаг
+    %a.btn(href="#{new_user_registration_path}")
+      Зарегестрироваться
 
 
 .footer-simple.inverse.pattern-noise
@@ -107,5 +90,5 @@
     %h2.logo.logo-small
       Urbanity
     %p.legal
-      \© 2014 Urbanity
+      \© 2014 Mikhail Vaysman
       %a(href="https://github.com/Vaysman/urbanity") Urbanity
