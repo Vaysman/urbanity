@@ -47,3 +47,4 @@ gem "devise", "~> 3.2"
 gem "dotenv-rails", "~> 0.10", :groups => [:development, :test]
 gem "newrelic_rpm", "~> 3.7"
 gem "thin", "~> 1.6"
+gem "simple-navigation", "~> 3.13"
