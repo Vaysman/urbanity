@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Web App A // Examples // Cascade</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    
+    <div class="header-nav">
+      <div class="container">
+        
+        <h2 class="logo logo-small"><a href="#">Postal</a></h2>
+        
+        <ul class="nav nav-pills">
+          <li><a href="#">Inbox</a></li>
+          <li class="active"><a href="#">Settings</a></li>
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">Help &amp; Support</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              <i class="fa fa-fw fa-user"></i>
+              Your Account <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-header">Dropdown header</li>
+              <li><a href="#">Settings</a></li>
+              <li><a href="#">Manage Subscription</a></li>
+            </ul>
+          </li>
+        </ul>
+        
+      </div>
+    </div> <!-- /.header-nav -->
+    
+    
+    <div class="nav-app-icon pattern-noise">
+      <div class="container">
+        
+        <div class="row title-bar inverse-major">
+          <h4 class="title">Settings</h4>
+          
+          <div class="navbar-header">
+            <!-- visible only at mobile size -->
+            <a class="btn btn-sm navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <i class="fa fa-fw fa-bars"></i>
+            </a>
+          </div>
+        </div>
+        
+        
+        <div class="row">
+          
+          <div class="col-sm-3 nav-icon">
+            <!-- wrapper div required to avoid breaking grid -->
+            <div class="collapse navbar-collapse">
+              <ul class="navbar nav nav-pills nav-stacked">
+                <li><h4 class="group-title">Filtering Rules</h4></li>
+                <li class="active"><a href="#"><i class="fa fa-fw fa-folder"></i> Newsletters</a></li>
+                <li><a href="#"><i class="fa fa-fw fa-folder"></i> Projects</a></li>
+                <li><a href="#"><i class="fa fa-fw fa-archive"></i> Auto Archive</a></li>
+                <li class="hilight"><a href="#"><i class="fa fa-fw fa-plus-square"></i> Create Rule</a></li>
+            
+                <li><h4 class="group-title">Tools</h4></li>
+                <li><a href="#"><i class="fa fa-fw fa-lock"></i> Trigger Lock</a></li>
+                <li><a href="#"><i class="fa fa-fw fa-exclamation"></i> Reminders</a></li>
+                <li><a href="#"><i class="fa fa-fw fa-check-circle-o"></i> Tasks</a></li>
+            
+                <li><h4 class="group-title">Accounts</h4></li>
+                <li><a href="#"><i class="fa fa-fw fa-google-plus"></i> Gmail</a></li>
+                <li><a href="#"><i class="fa fa-fw fa-envelope"></i> Studio Fellow LLC</a></li>
+                <li class="hilight"><a href="#"><i class="fa fa-fw fa-plus-square"></i> Add Account</a></li>
+              </ul>
+            </div>
+          </div> <!-- /.nav-icon -->
+          
+          <div class="col-sm-9 app-view">
+            
+            <!-- This form is only example content. -->
+            
+            <form class="form">
+              <div class="form-group">
+                <label for="RuleTitle" class="control-label">Rule Title</label>
+                <input type="text" class="form-control" id="RuleTitle" placeholder="" value="Newsletters">
+              </div>
+              <div class="form-group">
+                <label for="keywords" class="control-label">Email Subject Keywords</label>
+                <small class="help-block">Select any emails with subject lines that include these keywords. Separate with commas.</small>
+                <input type="text" class="form-control" id="keywords" placeholder="" value="Ruby Weekly, FontShop, Freelancers Weekly">
+              </div>
+              <div class="form-group">
+                <label for="domains" class="control-label">Email Sender Domains</label>
+                <small class="help-block">Select any emails that match these sender domains. Separate with commas.</small>
+                <input type="text" class="form-control" id="domains" placeholder="" value="list-manage.com">
+              </div>
+              <div class="form-group">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="" id="" value="" checked>
+                    Add Tag
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="" id="" value="">
+                    Archive
+                  </label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="TagTitle" class="control-label">Tag Title</label>
+                <small class="help-block">Enter a name for the tag.</small>
+                <input type="text" class="form-control" id="TagTitle" placeholder="" value="Newsletters">
+              </div>
+              <div class="form-group">
+                <button class="btn">Save</button>
+              </div>
+            </form>
+            
+            <!-- / example form -->
+            
+          </div> <!-- /.app-view -->
+          
+        </div> <!-- /.row -->
+        
+      </div>
+    </div> <!-- /.nav-app-icon -->
+    
+    
+    <div class="footer-list">
+      <div class="container">
+        
+        <div class="col-sm-4">
+          <h4>Knowledgebase</h4>
+          <ul>
+            <li><a href="#">How To Set Up Gmail</a></li>
+            <li><a href="#">Filtering Algorithms</a></li>
+            <li><a href="#">Enable Trigger Lock</a></li>
+            <li><a href="#">Browse Knowledgebase</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Email Support</a></li>
+            <li><a href="#">Bugtracker</a></li>
+            <li><a href="#">Status</a></li>
+            <li><a href="#">Feature Requests</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <h2 class="logo logo-small">Postal</h2>
+          <p class="legal">&copy; 2013 Studio Fellow, LLC. Postal is a fake app created to demonstrate <a href="http://cascade.io">http://cascade.io</a>.</p>
+        </div>
+        
+      </div>
+    </div> <!-- /.footer-list -->
+  
+    
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- Local path: assets/js/jquery.min.js -->
+    
+    <!-- Bootstrap JavaScript plugins -->
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <!-- Local path: assets/js/bootstrap.min.js -->
+    
+    <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+    
+    
+  </body>
+</html>
