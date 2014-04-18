@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @game.name
+%p
+  %b Start:
+  = @game.start
+%p
+  %b Registration end:
+  = @game.registration_end
+
+= link_to 'Edit', edit_game_path(@game)
+\|
+= link_to 'Back', games_path

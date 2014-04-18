@@ -1,6 +1,9 @@
 Urbanity::Application.routes.draw do
+  resources :games
+  resource  :player, only: [:show, :update, :edit]
+
   root "welcome#index"
-  
+
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -42,7 +45,7 @@ Urbanity::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
