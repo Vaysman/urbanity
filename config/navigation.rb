@@ -53,10 +53,13 @@ SimpleNavigation::Configuration.run do |navigation|
     #                            when the item should be highlighted, you can set a regexp which is matched
     #                            against the current URI.  You may also use a proc, or the symbol <tt>:subpath</tt>.
     #
-    # primary.item :welcome, "Welcome", root_path
     primary.item :sign_in, "Login", new_user_session_path, unless: -> { user_signed_in? }
     primary.item :sign_up, "Register", new_user_registration_path, unless: -> { user_signed_in? }
-    primary.item :player, "Your account", player_path, if: -> { user_signed_in? }
+    primary.item :account, "Account", nil, icon: %w[fa fa-fw fa-user], if: ->{ user_signed_in? } do |account|
+      account.item :player, "Settings", player_path
+      account.item :divider, nil, nil, class: "divider"
+      account.item :sign_out,  "Logout", destroy_user_session_path, method: :delete
+    end
 
     # Add an item which has a sub navigation (same params, but with block)
     # primary.item :key_2, 'name', url, options do |sub_nav|
@@ -74,6 +77,8 @@ SimpleNavigation::Configuration.run do |navigation|
     # works for all levels of the menu
     # primary.dom_attributes = {id: 'menu-id', class: 'menu-class'}
     # primary.dom_attributes = { class: %w[nav nav-pills] }
+
+    # bootstrap renderer used old style dom attrs
     primary.dom_class = %w[nav nav-pills]
 
     # You can turn off auto highlighting for a specific level
