@@ -53,7 +53,30 @@ SimpleNavigation::Configuration.run do |navigation|
     #                            when the item should be highlighted, you can set a regexp which is matched
     #                            against the current URI.  You may also use a proc, or the symbol <tt>:subpath</tt>.
     #
+    primary.item :games, "Games", nil, class: "group-title" do |games|
+      games.item :all, "All games", games_path
+      games.item :my, "My games", nil
+    end
+
     primary.item :teams, "Teams", "#"
+
+              # <ul class="navbar nav nav-pills nav-stacked">
+              #   <li><h4 class="group-title">Filtering Rules</h4></li>
+              #   <li class="active"><a href="#"><i class="fa fa-fw fa-folder"></i> Newsletters</a></li>
+              #   <li><a href="#"><i class="fa fa-fw fa-folder"></i> Projects</a></li>
+              #   <li><a href="#"><i class="fa fa-fw fa-archive"></i> Auto Archive</a></li>
+              #   <li class="hilight"><a href="#"><i class="fa fa-fw fa-plus-square"></i> Create Rule</a></li>
+
+              #   <li><h4 class="group-title">Tools</h4></li>
+              #   <li><a href="#"><i class="fa fa-fw fa-lock"></i> Trigger Lock</a></li>
+              #   <li><a href="#"><i class="fa fa-fw fa-exclamation"></i> Reminders</a></li>
+              #   <li><a href="#"><i class="fa fa-fw fa-check-circle-o"></i> Tasks</a></li>
+
+              #   <li><h4 class="group-title">Accounts</h4></li>
+              #   <li><a href="#"><i class="fa fa-fw fa-google-plus"></i> Gmail</a></li>
+              #   <li><a href="#"><i class="fa fa-fw fa-envelope"></i> Studio Fellow LLC</a></li>
+              #   <li class="hilight"><a href="#"><i class="fa fa-fw fa-plus-square"></i> Add Account</a></li>
+              # </ul>
 
     # Add an item which has a sub navigation (same params, but with block)
     # primary.item :key_2, 'name', url, options do |sub_nav|
@@ -71,7 +94,8 @@ SimpleNavigation::Configuration.run do |navigation|
     # works for all levels of the menu
     # primary.dom_attributes = {id: 'menu-id', class: 'menu-class'}
     # primary.dom_attributes = { class: %w[nav nav-pills] }
-    # primary.dom_class = %w[nav nav-pills]
+
+    primary.dom_class = %w[navbar nav nav-pills nav-stacked]
 
     # You can turn off auto highlighting for a specific level
     # primary.auto_highlight = false

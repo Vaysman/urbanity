@@ -54,3 +54,4 @@ gem "newrelic_rpm", "~> 3.7"
 gem "thin", "~> 1.6"
 gem "simple-navigation", "~> 3.13"
 gem "simple-navigation-bootstrap", "~> 1.0"
+gem 'pry-rails', "~> 0.3", :group => :development

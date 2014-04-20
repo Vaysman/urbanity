@@ -1,0 +1,2 @@
+require "main_navigation_renderer"
+SimpleNavigation.register_renderer main_navigation_renderer: Urbanity::Renderer::Main

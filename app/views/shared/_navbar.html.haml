@@ -2,30 +2,6 @@
   .container
 
     %h2.logo.logo-small
-      %a(href="#")
+      %a(href="/")
         Urbanity
-    = render_navigation renderer: :bootstrap, expand_all: true
-    / %ul.nav.nav-pills
-    /   %li
-    /     %a(href="#")
-    /       Inbox
-    /   %li.active
-    /     %a(href="#")
-    /       Settings
-    / %li
-    /   %a(href="#")
-    /     Help &amp; Support
-    /%li.dropdown
-    /  %a.dropdown-toggle(data-toggle="dropdown" href="#")
-    /    %i.fa.fa-fw.fa-user
-    /    Your Account
-    /    %span.caret
-    /  %ul.dropdown-menu
-    /    %li.dropdown-header
-    /      Dropdown header
-    /    %li
-    /      %a(href="#")
-    /        Settings
-    /    %li
-    /      %a(href="#")
-    /        Manage Subscription
+    = render_navigation(context: "top", renderer: :bootstrap, expand_all: true)

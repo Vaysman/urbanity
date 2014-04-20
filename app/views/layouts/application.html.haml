@@ -9,5 +9,21 @@
 
   %body
     = render "shared/navbar"
-    .container.staggers.pattern-noise
-      = yield
+    .nav-app-icon.pattern-noise
+      .container
+        .row.title-bar.inverse-major
+          %h4.title
+            = section_title()
+          .navbar-header
+            / visible only at mobile size
+            %a.btn.btn-sm.navbar-toggle(data-toggle="collapse" data-target=".navbar-collapse")
+              %span.sr-only
+                Toggle navigation
+              %i.fa.fa-fw.fa-bars
+        .row
+          .col-sm-3.nav-icon
+            / wrapper div required to avoid breaking grid
+            .collapse.navbar-collapse
+              = render_navigation context: "main", renderer: :main_navigation_renderer
+          .col-sm-9.app-view
+            = yield
