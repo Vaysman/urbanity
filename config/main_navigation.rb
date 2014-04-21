@@ -58,7 +58,9 @@ SimpleNavigation::Configuration.run do |navigation|
       games.item :my, "My games", nil
     end
 
-    primary.item :teams, "Teams", "#"
+    primary.item :teams, "Teams", nil, class: "group-title" do |teams|
+      teams.item :my, "My teams", "/teams"
+    end
 
               # <ul class="navbar nav nav-pills nav-stacked">
               #   <li><h4 class="group-title">Filtering Rules</h4></li>

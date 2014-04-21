@@ -34,7 +34,7 @@ module Urbanity
           if include_sub_navigation?(item)
             li_content << render_sub_navigation_for(item)
           end
-          content_tag(:li, li_content + "2", li_options)
+          content_tag(:li, li_content, li_options)
         }.join
       end
     end
