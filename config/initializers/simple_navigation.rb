@@ -1,2 +1,2 @@
-require "main_navigation_renderer"
-SimpleNavigation.register_renderer main_navigation_renderer: Urbanity::Renderer::Main
+require "cascade_side_navigation_renderer"
+SimpleNavigation.register_renderer cascade_side_navigation_renderer: Urbanity::Renderer::CascadeSideNavigation

@@ -53,12 +53,12 @@ SimpleNavigation::Configuration.run do |navigation|
     #                            when the item should be highlighted, you can set a regexp which is matched
     #                            against the current URI.  You may also use a proc, or the symbol <tt>:subpath</tt>.
     #
-    primary.item :games, "Games", nil, class: "group-title" do |games|
-      games.item :all, "All games", games_path
+    primary.item :games, "Games", nil, h4: true do |games|
+      games.item :all, "All games", games_path, icon: %w[fa fa-fw fa-folder]
       games.item :my, "My games", nil
     end
 
-    primary.item :teams, "Teams", nil, class: "group-title" do |teams|
+    primary.item :teams, "Teams", nil, h4: true do |teams|
       teams.item :my, "My teams", "/teams"
     end
 
@@ -95,9 +95,7 @@ SimpleNavigation::Configuration.run do |navigation|
     # you can also specify html attributes to attach to this particular level
     # works for all levels of the menu
     # primary.dom_attributes = {id: 'menu-id', class: 'menu-class'}
-    # primary.dom_attributes = { class: %w[nav nav-pills] }
-
-    primary.dom_class = %w[navbar nav nav-pills nav-stacked]
+    primary.dom_attributes = { class: %w[navbar nav nav-pills nav-stacked] }
 
     # You can turn off auto highlighting for a specific level
     # primary.auto_highlight = false

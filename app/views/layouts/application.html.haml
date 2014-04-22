@@ -24,6 +24,6 @@
           .col-sm-3.nav-icon
             / wrapper div required to avoid breaking grid
             .collapse.navbar-collapse
-              = render_navigation context: "main", renderer: :main_navigation_renderer
+              = render_navigation context: "main", renderer: :cascade_side_navigation_renderer
           .col-sm-9.app-view
             = yield
