@@ -1,2 +1,0 @@
-require "cascade_side_navigation_renderer"
-SimpleNavigation.register_renderer cascade_side_navigation_renderer: Urbanity::Renderer::CascadeSideNavigation
