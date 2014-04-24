@@ -2,11 +2,12 @@
 - content_for :title do
   Games
 
+
 %table.table
   %tr
     %th Name
-    %th Start
-    %th Registration end
+    %th When game start
+    %th When registration end
     %th
     %th
     %th
@@ -16,10 +17,8 @@
       %td= game.name
       %td= game.start
       %td= game.registration_end
-      %td= link_to 'Show', game
-      %td= link_to 'Edit', edit_game_path(game)
-      %td= link_to 'Destroy', game, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %td= link_to 'Show', game, class: "btn btn-default"
+      %td= link_to 'Edit', edit_game_path(game), class: "btn btn-primary"
+      %td= link_to 'Destroy', game, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: "btn btn-danger"
 
-%br
-
-= link_to 'New Game', new_game_path
+= link_to 'New Game', new_game_path, class: "btn btn-default"
