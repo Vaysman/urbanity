@@ -6,4 +6,11 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for(resource)
     games_path
   end
+
+  protected
+
+  def player
+    fail SecurityError.new("User is not logged in") unless user_signed_in?
+    @player ||= current_user.player
+  end
 end
