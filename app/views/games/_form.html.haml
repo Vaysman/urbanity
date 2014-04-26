@@ -15,5 +15,11 @@
   .form-group
     = f.label :registration_end
     = f.text_field :registration_end, class: "form-control", placeholder: "Registration end"
+  .form-group
+    = f.label :max_number_of_teams
+    = f.text_field :max_number_of_teams, class: "form-control", placeholder: "Max number of teams"
+  .form-group
+    = f.label :min_number_of_teams
+    = f.text_field :min_number_of_teams, class: "form-control", placeholder: "Min number of teams"
 
   = f.submit 'Save', class: "btn btn-default"

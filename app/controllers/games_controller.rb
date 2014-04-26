@@ -13,7 +13,7 @@ class GamesController < ApplicationController
 
   # GET /games/new
   def new
-    @game = Game.new
+    @game = Game.new(max_number_of_teams: 15, min_number_of_teams: 3)
   end
 
   # GET /games/1/edit
@@ -49,6 +49,7 @@ class GamesController < ApplicationController
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_game
+    binding.pry
     @game = player.games.find(params[:id])
   end
 
