@@ -14,17 +14,6 @@ class PlayersController < ApplicationController
   def edit
   end
 
-  # POST /players
-  def create
-    @player = Player.new(player_params)
-
-    if @player.save
-      redirect_to @player, notice: 'Player was successfully created.'
-    else
-      render :new
-    end
-  end
-
   # PATCH/PUT /players/1
   def update
     if @player.update(player_params)
