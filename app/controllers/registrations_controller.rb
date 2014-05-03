@@ -1,5 +1,6 @@
 class RegistrationsController < Devise::RegistrationsController
   after_action :create_player
+  layout "auth"
 
   protected
 
