@@ -53,6 +53,8 @@ SimpleNavigation::Configuration.run do |navigation|
     #                            when the item should be highlighted, you can set a regexp which is matched
     #                            against the current URI.  You may also use a proc, or the symbol <tt>:subpath</tt>.
     #
+
+    # это не подключено. вся навигация в _shared/_sidenav
     primary.item :games, "Games", nil, h4: true do |games|
       games.item :all, "All games", games_path, icon: %w[fa fa-fw fa-folder]
       games.item :my, "My games", nil
