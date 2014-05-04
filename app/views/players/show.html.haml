@@ -1,6 +1,13 @@
-%p#notice= notice
+%h2= player.full_name
 
+%p
+  %strong
+    Nick:
+  = player.nick_name
 
-= link_to 'Edit', edit_player_path(@player)
-\|
-= link_to 'Back', player_path
+%p
+  %strong
+    Bio:
+  = player.bio
+
+= link_to 'Edit', edit_player_path(player), class: "btn btn-default"

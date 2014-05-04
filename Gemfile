@@ -2,10 +2,12 @@ source "https://rubygems.org"
 
 ruby "2.1.1"
 
-gem 'pry'
-gem 'pry-doc'
-gem 'pry-stack_explorer'
-gem 'pry-debugger'
+group :development do
+  gem 'pry'
+  gem 'pry-doc'
+  gem 'pry-stack_explorer'
+  gem 'pry-debugger'
+end
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails"
 gem "rails", "~> 4.0"
@@ -55,3 +57,4 @@ gem "thin", "~> 1.6"
 gem "simple-navigation", "~> 3.13"
 gem "simple-navigation-bootstrap", "~> 1.0"
 gem 'pry-rails', "~> 0.3", :group => :development
+gem 'draper', '~> 1.3'

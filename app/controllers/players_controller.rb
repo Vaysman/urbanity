@@ -1,5 +1,6 @@
 class PlayersController < ApplicationController
   before_action :set_player
+  decorates_assigned :player
 
   # GET /players/1
   def show
