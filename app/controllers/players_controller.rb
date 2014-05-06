@@ -2,42 +2,27 @@ class PlayersController < ApplicationController
   before_action :set_player
   decorates_assigned :player
 
-  # GET /players/1
+  # GET /player
   def show
   end
 
-  # GET /players/new
-  def new
-    @player = Player.new
-  end
-
-  # GET /players/1/edit
+  # GET /player/edit
   def edit
   end
 
-  # PATCH/PUT /players/1
+  # PATCH/PUT /player
   def update
     if @player.update(player_params)
-      redirect_to @player, notice: 'Player was successfully updated.'
+      redirect_to player_path, notice: 'Player was successfully updated.'
     else
       render :edit
     end
   end
 
-  # DELETE /players/1
-  def destroy
-    @player.destroy
-    redirect_to players_url, notice: 'Player was successfully destroyed.'
-  end
-
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_player
-      @player = current_user.player
-    end
 
-    # Only allow a trusted parameter "white list" through.
-    def player_params
-      params.require("player").permit("first_name", "last_name", "bio")
-    end
+  # Only allow a trusted parameter "white list" through.
+  def player_params
+    params.require("player").permit("first_name", "last_name", "bio")
+  end
 end

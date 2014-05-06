@@ -33,4 +33,8 @@ class PlayerDecorator < Draper::Decorator
       object.bio
     end
   end
+
+  def email
+    user.email
+  end
 end
