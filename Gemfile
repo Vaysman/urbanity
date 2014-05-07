@@ -3,10 +3,10 @@ source "https://rubygems.org"
 ruby "2.1.1"
 
 group :development do
-  gem 'pry'
-  gem 'pry-doc'
-  gem 'pry-stack_explorer'
-  gem 'pry-debugger'
+  gem "pry"
+  gem "pry-doc"
+  gem "pry-stack_explorer"
+  gem "pry-debugger"
 end
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails"
@@ -56,5 +56,6 @@ gem "newrelic_rpm", "~> 3.7"
 gem "thin", "~> 1.6"
 gem "simple-navigation", "~> 3.13"
 gem "simple-navigation-bootstrap", "~> 1.0"
-gem 'pry-rails', "~> 0.3", :group => :development
-gem 'draper', '~> 1.3'
+gem "pry-rails", "~> 0.3", :group => :development
+gem "draper", "~> 1.3"
+gem "simple_form"
