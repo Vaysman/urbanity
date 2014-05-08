@@ -1,18 +1,5 @@
-= form_for @player, html: { role: "form"} do |f|
-  - if @player.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@player.errors.count, "error")} prohibited this player from being saved:"
-      %ul
-        - @player.errors.full_messages.each do |msg|
-          %li= msg
-
-  .form-group
-    = f.label :first_name
-    = f.text_field :first_name, class: "form-control"
-  .form-group
-    = f.label :last_name
-    = f.text_field :last_name, class: "form-control"
-  .form-group
-    = f.label :bio
-    = f.text_area :bio, class: "form-control"
-  = f.submit 'Save', class: "btn btn-default"
+= simple_form_for @player, html: { role: "form"} do |f|
+    = f.input :first_name
+    = f.input :last_name
+    = f.input :bio
+    = f.button :submit
