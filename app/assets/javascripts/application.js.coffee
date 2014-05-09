@@ -13,4 +13,8 @@
 #= require jquery
 #= require jquery_ujs
 #= require bootstrap
+#= require bootstrap-datepicker
+#= require bootstrap-datetimepicker
+#= require locales/bootstrap-datepicker.ru.js
+#= require locales/bootstrap-datetimepicker.ru.js
 #= require_tree .

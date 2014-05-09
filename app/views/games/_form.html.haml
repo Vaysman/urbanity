@@ -1,25 +1,7 @@
-= form_for @game, html: { role: "form" } do |f|
-  - if @game.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@game.errors.count, "error")} prohibited this game from being saved:"
-      %ul
-        - @game.errors.full_messages.each do |msg|
-          %li= msg
-
-  .form-group
-    = f.label :name
-    = f.text_field :name, class: "form-control", placeholder: "Name"
-  .form-group
-    = f.label :start
-    = f.text_field :start, class: "form-control", placeholder: "Game start"
-  .form-group
-    = f.label :registration_end
-    = f.text_field :registration_end, class: "form-control", placeholder: "Registration end"
-  .form-group
-    = f.label :max_number_of_teams
-    = f.text_field :max_number_of_teams, class: "form-control", placeholder: "Max number of teams"
-  .form-group
-    = f.label :min_number_of_teams
-    = f.text_field :min_number_of_teams, class: "form-control", placeholder: "Min number of teams"
-
-  = f.submit 'Save', class: "btn btn-default"
+= default_form_for @game, html: { role: "form" } do |f|
+  = f.input :name
+  = f.input :start
+  = f.input :registration_end
+  = f.input :max_number_of_teams
+  = f.input :min_number_of_teams
+  = f.button :submit

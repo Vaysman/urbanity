@@ -1,13 +1,14 @@
-%p#notice= notice
+- content_for :title do
+  Game
+
+%h2= game.name
 
 %p
-  %b Name:
-  = @game.name
-%p
-  %b Start:
-  = @game.start
-%p
-  %b Registration end:
-  = @game.registration_end
+  %strong Start:
+  = game.start
 
-= link_to 'Edit', edit_game_path(@game), class: "btn btn-default"
+%p
+  %strong Registration end:
+  = game.registration_end
+
+= link_to 'Edit', edit_game_path(game), class: "btn btn-default"

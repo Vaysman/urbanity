@@ -1,9 +1,13 @@
 class GamesController < ApplicationController
+  include SetPlayer
+
+  decorates_assigned :game
+
   before_action :authenticate_user!
   before_action :set_game, only: [:show, :edit, :update, :destroy]
 
   def index
-    @games = Game.all
+    @games = @player.games
     @games = @games.where(player: current_user) if params[:filter] == "my"
   end
 
@@ -22,7 +26,7 @@ class GamesController < ApplicationController
 
   # POST /games
   def create
-    @game = player.games.build(game_params)
+    @game = @player.games.build(game_params)
 
     if @game.save
       redirect_to @game, notice: 'Game was successfully created.'
@@ -49,12 +53,11 @@ class GamesController < ApplicationController
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_game
-    binding.pry
-    @game = player.games.find(params[:id])
+    @game = @player.games.find(params[:id])
   end
 
   # Only allow a trusted parameter "white list" through.
   def game_params
-    params.require(:game).permit(:name, :start, :registration_end)
+    params.require(:game).permit(:name, :start, :registration_end, :max_number_of_teams, :min_number_of_teams)
   end
 end
