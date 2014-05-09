@@ -1,10 +1,10 @@
 GIT
-  remote: git://github.com/plataformatec/simple_form.git
-  revision: 9196efd2562573aa08037034051fc8c924083e10
+  remote: git://github.com/vaysman/simple_form_bootstrap3.git
+  revision: 8bdee9a8e3784ad8e29e39f1aa5d5dc34a2d74e6
   specs:
-    simple_form (3.1.0.rc1)
-      actionpack (~> 4.0)
-      activemodel (~> 4.0)
+    simple_form_bootstrap3 (0.2.7)
+      bootstrap-sass (~> 3.1.1.1)
+      simple_form (~> 3.0.2)
 
 GEM
   remote: https://rubygems.org/
@@ -158,6 +158,9 @@ GEM
     simple-navigation-bootstrap (1.0.0)
       railties (>= 3.1)
       simple-navigation (>= 3.7.0)
+    simple_form (3.0.2)
+      actionpack (~> 4.0)
+      activemodel (~> 4.0)
     slop (3.5.0)
     sprockets (2.11.0)
       hike (~> 1.2)
@@ -211,6 +214,7 @@ DEPENDENCIES
   sdoc (~> 0.4)
   simple-navigation (~> 3.13)
   simple-navigation-bootstrap (~> 1.0)
-  simple_form!
+  simple_form (~> 3.0)
+  simple_form_bootstrap3!
   thin (~> 1.6)
   uglifier (~> 2.4)

@@ -58,9 +58,9 @@ gem "simple-navigation", "~> 3.13"
 gem "simple-navigation-bootstrap", "~> 1.0"
 gem "pry-rails", "~> 0.3", :group => :development
 gem "draper", "~> 1.3"
-gem "simple_form", github: "plataformatec/simple_form"
+#gem "simple_form", github: "plataformatec/simple_form"
 # TODO
 # alternative solution
 # need check
-#gem "simple_form", "~> 3.0"
-#gem "simple_form_bootstrap3", "~> 0.2"
+gem "simple_form", "~> 3.0"
+gem "simple_form_bootstrap3", github: "vaysman/simple_form_bootstrap3"
