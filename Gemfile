@@ -3,10 +3,10 @@ source "https://rubygems.org"
 ruby "2.1.1"
 
 group :development do
-  gem "pry"
-  gem "pry-doc"
-  gem "pry-stack_explorer"
-  gem "pry-debugger"
+  gem "pry", "~> 0.9"
+  gem "pry-doc", "~> 0.6"
+  gem "pry-stack_explorer", "~> 0.4"
+  gem "pry-debugger", "~> 0.2"
 end
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails"
@@ -48,7 +48,7 @@ end
 # gem "debugger", group: [:development, :test]
 
 gem "bootstrap-sass", "~> 3.1"
-gem "rails_12factor", group: :production
+gem "rails_12factor", "~> 0", group: :production
 gem "haml-rails", "~> 0.5"
 gem "devise", "~> 3.2"
 gem "dotenv-rails", "~> 0.10", :groups => [:development, :test]
