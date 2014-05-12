@@ -64,3 +64,5 @@ gem "draper", "~> 1.3"
 # need check
 gem "simple_form", "~> 3.0"
 gem "simple_form_bootstrap3", github: "vaysman/simple_form_bootstrap3"
+
+gem "spring", "~> 1.1", group: :development

@@ -162,6 +162,7 @@ GEM
       actionpack (~> 4.0)
       activemodel (~> 4.0)
     slop (3.5.0)
+    spring (1.1.2)
     sprockets (2.11.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -216,5 +217,6 @@ DEPENDENCIES
   simple-navigation-bootstrap (~> 1.0)
   simple_form (~> 3.0)
   simple_form_bootstrap3!
+  spring (~> 1.1)
   thin (~> 1.6)
   uglifier (~> 2.4)
