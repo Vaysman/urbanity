@@ -64,5 +64,6 @@ gem "draper", "~> 1.3"
 # need check
 gem "simple_form", "~> 3.0"
 gem "simple_form_bootstrap3", github: "vaysman/simple_form_bootstrap3"
-
+# Spring speeds up development by keeping your application running in the background.
+# Read more: https://github.com/rails/spring
 gem "spring", "~> 1.1", group: :development
