@@ -11,7 +11,25 @@ class GameDecorator < Draper::Decorator
     format_timedate(object.registration_end)
   end
 
+  def registred_teams_count
+    5
+  end
+
+  def registred_teams_list
+    h.content_tag(:div, class: "list-group") {
+      ((1..5).map { |i| team_line(i)}).join.html_safe
+    }
+  end
+
   private
+
+  def team_line(name)
+    h.link_to(team_line_badge(name) + "Team #{name}", "#", class: "list-group-item")
+  end
+
+  def team_line_badge(count)
+    h.content_tag(:span, count, class: "badge")
+  end
 
   def clock_icon
     h.content_tag(:span, class: "glyphicon glyphicon-time") {}.html_safe

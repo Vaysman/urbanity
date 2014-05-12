@@ -11,4 +11,19 @@
   %strong Registration end:
   = game.registration_end
 
+%p
+  %strong Maximum number of teams:
+  = game.max_number_of_teams
+
+%p
+  %strong Minimum number of teams:
+  = game.min_number_of_teams
+
+%p
+  %strong Registred teams
+  %span.badge
+    = game.registred_teams_count
+= game.registred_teams_list
+
+
 = link_to 'Edit', edit_game_path(game), class: "btn btn-default"
