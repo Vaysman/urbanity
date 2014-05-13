@@ -3,27 +3,24 @@
 
 %h2= game.name
 
-%p
-  %strong Start:
-  = game.start
+%dl.dl-horizontal
+  %dt Start
+  %dd= game.start
 
-%p
-  %strong Registration end:
-  = game.registration_end
+  %dt Registration end:
+  %dd= game.registration_end
 
-%p
-  %strong Maximum number of teams:
-  = game.max_number_of_teams
+  %dt Maximum teams:
+  %dd= game.max_number_of_teams
 
-%p
-  %strong Minimum number of teams:
-  = game.min_number_of_teams
+  %dt Minimum teams:
+  %dd= game.min_number_of_teams
 
 %p
   %strong Registred teams
   %span.badge
     = game.registred_teams_count
-= game.registred_teams_list
 
+= game.registred_teams_list
 
 = link_to 'Edit', edit_game_path(game), class: "btn btn-default"

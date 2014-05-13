@@ -28,7 +28,7 @@ class GameDecorator < Draper::Decorator
   end
 
   def team_line_badge(count)
-    h.content_tag(:span, count, class: "badge")
+    h.content_tag(:span, h.pluralize(count, "member"), class: "badge")
   end
 
   def clock_icon
