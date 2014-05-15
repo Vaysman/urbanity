@@ -67,3 +67,4 @@ gem "simple_form_bootstrap3", github: "vaysman/simple_form_bootstrap3"
 # Spring speeds up development by keeping your application running in the background.
 # Read more: https://github.com/rails/spring
 gem "spring", "~> 1.1", group: :development
+gem "r18n-rails", "~> 1.1"
