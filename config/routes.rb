@@ -1,5 +1,6 @@
 Urbanity::Application.routes.draw do
   resources :games
+  resources :teams
   resource  :player, only: [:show, :update, :edit]
 
   root "welcome#index"
