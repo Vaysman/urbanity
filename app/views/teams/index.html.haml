@@ -1,17 +1,13 @@
-%h1 Listing teams
+- content_for :title do
+    Teams
 
 %table
   %tr
-    %th
-    %th
-    %th
+    %th Name
+    %th Size
 
   - @teams.each do |team|
     %tr
-      %td= link_to 'Show', team
-      %td= link_to 'Edit', edit_team_path(team)
-      %td= link_to 'Destroy', team, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %td= link_to team.name, team
+      %td= link_to "5", team
 
-%br
-
-= link_to 'New Team', new_team_path
