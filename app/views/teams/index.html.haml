@@ -1,13 +1,15 @@
 - content_for :title do
-    Teams
+  Teams
 
-%table
+%table.table
   %tr
     %th Name
     %th Size
+    %th Action
 
   - @teams.each do |team|
     %tr
       %td= link_to team.name, team
-      %td= link_to "5", team
+      %td= link_to team.size, team
+      %td= team.actions_for(current_player)
 

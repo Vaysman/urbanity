@@ -1,12 +1,14 @@
 class TeamsController < ApplicationController
-  include SetPlayer
+  include CurrentPlayer
+
+  decorates_assigned :team
 
   before_action :authenticate_user!
   before_action :set_team, only: [:show, :edit, :update, :destroy]
 
   # GET /teams
   def index
-    @teams = Team.all
+    @teams = Team.all.decorate
   end
 
   # GET /teams/1
@@ -56,6 +58,6 @@ class TeamsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def team_params
-      params[:team]
+      params.require(:team).permit(:name)
     end
 end

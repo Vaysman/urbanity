@@ -1,5 +1,5 @@
 class PlayersController < ApplicationController
-  include SetPlayer
+  include CurrentPlayer
 
   decorates_assigned :player
 
