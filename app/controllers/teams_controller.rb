@@ -26,7 +26,9 @@ class TeamsController < ApplicationController
 
   # POST /teams
   def create
-    @team = Team.new(team_params)
+    team_creator = TeamCreator.new(current_player)
+    redirect_to teams_path, error: team_creator.cannot_create_team_reason unless team_creator.can_create_team?
+    @team = team_creator.create(team_params)
 
     if @team.save
       redirect_to @team, notice: 'Team was successfully created.'

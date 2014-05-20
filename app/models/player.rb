@@ -4,7 +4,7 @@ class Player < ActiveRecord::Base
 
   has_many :games
 
-  def own_team?(team)
-    team.captain == self
+  def own_team?(team = nil)
+    team && team.captain == self
   end
 end
