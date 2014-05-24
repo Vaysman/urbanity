@@ -3,6 +3,7 @@ class Player < ActiveRecord::Base
   belongs_to :team
 
   has_many :games
+  has_many :invitations
 
   def own_team?(team = nil)
     team && team.captain == self
