@@ -5,6 +5,8 @@ class Player < ActiveRecord::Base
   has_many :games
   has_many :invitations
 
+  validates :user, :nick, presence: true
+
   def own_team?(team = nil)
     team && team.captain == self
   end
