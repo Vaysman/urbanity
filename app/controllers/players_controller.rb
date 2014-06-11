@@ -1,6 +1,10 @@
 class PlayersController < ApplicationController
   include CurrentPlayer
 
+  before_action do
+    @player = current_player
+  end
+
   decorates_assigned :player
 
   def show
@@ -10,7 +14,7 @@ class PlayersController < ApplicationController
   end
 
   def update
-    if @player.update(player_params)
+    if @current_player.update(player_params)
       redirect_to player_path, notice: 'Player was successfully updated.'
     else
       render :edit
