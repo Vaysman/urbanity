@@ -96,4 +96,6 @@ Urbanity::Application.configure do
       '.eot',  '.otf', '.svc', '.woff', '.ttf', # Fonts
     ]
   end)
+
+  config.action_mailer.default_url_options = { :host => 'urbanity.herokuapp.com' }
 end
