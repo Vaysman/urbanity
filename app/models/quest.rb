@@ -2,6 +2,7 @@ class Quest < ActiveRecord::Base
   default_scope { order(:position) }
 
   belongs_to :game
+  has_many :answers
 
   validates :name, :game, presence: true
   validates :position, numericality: { only_integer: true, greater_than: 0 }, uniqueness: { scope: :game }
