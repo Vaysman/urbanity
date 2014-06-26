@@ -3,6 +3,7 @@ class Quest < ActiveRecord::Base
 
   belongs_to :game
   has_many :answers
+  has_many :hints
 
   validates :name, :game, presence: true
   validates :position, numericality: { only_integer: true, greater_than: 0 }, uniqueness: { scope: :game }
