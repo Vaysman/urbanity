@@ -68,3 +68,7 @@ gem "simple_form_bootstrap3", github: "vaysman/simple_form_bootstrap3"
 # Read more: https://github.com/rails/spring
 gem "spring", "~> 1.1", group: :development
 gem "r18n-rails", "~> 1.1"
+
+group :development, :test do
+  gem "rspec-rails", "~> 3.0.0"
+end
