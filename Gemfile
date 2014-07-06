@@ -70,3 +70,4 @@ gem "spring", "~> 1.1", group: :development
 gem "r18n-rails", "~> 1.1"
 
 gem "rspec-rails", "~> 3.0.0", :groups => [:development, :test]
+gem "spring-commands-rspec", :group => :development
