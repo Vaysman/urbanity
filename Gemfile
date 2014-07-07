@@ -70,4 +70,5 @@ gem "spring", "~> 1.1", group: :development
 gem "r18n-rails", "~> 1.1"
 
 gem "rspec-rails", "~> 3.0.0", :groups => [:development, :test]
-gem "spring-commands-rspec", :group => :development
+gem "spring-commands-rspec", "~> 1.0", :group => :development
+gem "shoulda-matchers", "~> 2.6", :group => :test, require: false
