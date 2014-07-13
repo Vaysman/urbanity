@@ -21,15 +21,15 @@ RSpec.describe Player, :type => :model do
   end
 
   context "with team" do
-    let(:team) { Team.new }
-    let(:player) { Player.new(team: team) }
+    let(:team) { Team.new(captain: player) }
+    let(:player) { Player.new }
     describe "#own_team?" do
       it "returns false for other team" do
-        player.own_team?(Team.new).should be_false
+        expect(player.own_team?(Team.new)).to be false
       end
 
       it "returns true for own team" do
-        player.own_team?(team).should be_true
+        expect(player.own_team?(team)).to be true
       end
     end
   end
