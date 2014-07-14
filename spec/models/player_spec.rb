@@ -14,8 +14,8 @@ RSpec.describe Player, :type => :model do
     let(:player) { Player.new }
     describe "#own_team?" do
       it "returns nil" do
-        player.own_team?.should be_nil
-        player.own_team?(Team.new).should be_false:w
+        expect(player.own_team?).to be_nil
+        expect(player.own_team?(Team.new)).to be false
       end
     end
   end
