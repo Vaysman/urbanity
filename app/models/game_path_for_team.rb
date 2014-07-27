@@ -3,5 +3,5 @@ class GamePathForTeam < ActiveRecord::Base
   belongs_to :team
   belongs_to :quest
 
-  validates :position, numericality: { only_integer: true, greater_than: 0 }, uniqueness: { scope: [:game, :quest, :team] }
+  validates :position, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, uniqueness: { scope: [:game, :quest, :team] }
 end
