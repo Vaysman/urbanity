@@ -8,3 +8,13 @@ addons:
 before_script:
   - cp config/database.yml.travis config/database.yml
   - psql -c 'create database travis_ci_test;' -U postgres
+
+env:
+  - DB=postgresql
+
+bundler_args: --without development production --deployment
+cache: bundler
+
+script:
+  - RAILS_ENV=test bundle exec rake db:migrate
+  - bundle exec rspec

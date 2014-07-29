@@ -52,7 +52,7 @@ gem "rails_12factor", "~> 0", group: :production
 gem "haml-rails", "~> 0.5"
 gem "devise", "~> 3.2"
 gem "dotenv-rails", "~> 0.10", :groups => [:development, :test]
-gem "newrelic_rpm", "~> 3.7"
+gem "newrelic_rpm", "~> 3.7", group: :production
 gem "thin", "~> 1.6"
 gem "simple-navigation", "~> 3.13"
 gem "simple-navigation-bootstrap", "~> 1.0"
