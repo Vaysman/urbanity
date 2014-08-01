@@ -10,7 +10,7 @@ group :development do
 end
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails"
-gem "rails", "~> 4.0"
+gem "rails", "~> 4.1"
 
 # Use postgresql as the database for Active Record
 gem "pg", "~> 0.17"
@@ -19,7 +19,7 @@ gem "pg", "~> 0.17"
 gem "sass-rails", "~> 4.0"
 
 # Use Uglifier as compressor for JavaScript assets
-gem "uglifier", "~> 2.4"
+gem "uglifier", "~> 2.5"
 
 # Use CoffeeScript for .js.coffee assets and views
 gem "coffee-rails", "~> 4.0"
@@ -47,12 +47,12 @@ end
 # Use debugger
 # gem "debugger", group: [:development, :test]
 
-gem "bootstrap-sass", "~> 3.1"
+gem "bootstrap-sass", "~> 3.2"
 gem "rails_12factor", "~> 0", group: :production
 gem "haml-rails", "~> 0.5"
 gem "devise", "~> 3.2"
 gem "dotenv-rails", "~> 0.10", :groups => [:development, :test]
-gem "newrelic_rpm", "~> 3.7", group: :production
+gem "newrelic_rpm", "~> 3.9", group: :production
 gem "thin", "~> 1.6"
 gem "simple-navigation", "~> 3.13"
 gem "simple-navigation-bootstrap", "~> 1.0"
