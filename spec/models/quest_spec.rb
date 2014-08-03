@@ -1,4 +1,4 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe Quest, :type => :model do
   it { belong_to(:game) }
@@ -12,8 +12,8 @@ RSpec.describe Quest, :type => :model do
 
   describe "#swap_position" do
     it "swap position of two quest" do
-      quest1 = Quest.create!(position: 1)
-      quest2 = Quest.create!(position: 2)
+      quest1 = stub_model(Quest, position: 1)
+      quest2 = stub_model(Quest, position: 2)
       quest1.swap_position(quest2)
       expect(quest1.position).to eq(2)
       expect(quest2.position).to eq(1)
