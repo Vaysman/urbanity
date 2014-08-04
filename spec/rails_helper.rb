@@ -8,13 +8,14 @@ require "codeclimate-test-reporter"
 require "simplecov"
 require "coveralls"
 
-SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
-  Coveralls::SimpleCov::Formatter,
-  SimpleCov::Formatter::HTMLFormatter,
-  CodeClimate::TestReporter::Formatter
-]
+# SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
+#   Coveralls::SimpleCov::Formatter,
+#   SimpleCov::Formatter::HTMLFormatter,
+#   CodeClimate::TestReporter::Formatter
+# ]
 
-SimpleCov.start 'rails'
+# SimpleCov.start 'rails'
+CodeClimate::TestReporter.start
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
