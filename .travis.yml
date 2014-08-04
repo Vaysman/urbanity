@@ -10,9 +10,8 @@ before_script:
   - psql -c 'create database travis_ci_test;' -U postgres
 
 env:
-  - DB=postgresql
-  - CODECLIMATE_REPO_TOKEN=fe9e6aace00a06a5afc0f786d665cd1714113884493db130bb4cfc49bfab2e25
-
+  - DB=postgresql CODECLIMATE_REPO_TOKEN=fe9e6aace00a06a5afc0f786d665cd1714113884493db130bb4cfc49bfab2e25
+  
 bundler_args: --without development production --deployment
 cache: bundler
 
