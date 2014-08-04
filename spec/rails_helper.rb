@@ -4,8 +4,17 @@ require "spec_helper"
 require File.expand_path("../../config/environment", __FILE__)
 require "rspec/rails"
 require "shoulda/matchers"
+require "codeclimate-test-reporter"
+require "simplecov"
 require "coveralls"
-Coveralls.wear!("rails")
+
+SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
+  Coveralls::SimpleCov::Formatter,
+  SimpleCov::Formatter::HTMLFormatter,
+  CodeClimate::TestReporter::Formatter
+]
+
+SimpleCov.start 'rails'
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are

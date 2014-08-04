@@ -72,5 +72,6 @@ gem "r18n-rails", "~> 1.1"
 gem "rspec-rails", "~> 3.0.0", :groups => [:development, :test]
 gem "spring-commands-rspec", "~> 1.0", :group => :development
 gem "shoulda-matchers", "~> 2.6", :group => :test, require: false
-gem "coveralls", "~> 0.7", require: false
+gem "coveralls", "~> 0.7", :groups => :test, require: false
 gem "rspec-activemodel-mocks", "~> 1.0", :groups => [:development, :test]
+gem "codeclimate-test-reporter", "~> 0.4", group: :test, require: false
