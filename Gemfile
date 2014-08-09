@@ -2,6 +2,11 @@ source "https://rubygems.org"
 
 ruby "2.1.2"
 
+group :production do
+  gem "rails_12factor", "~> 0"
+  gem "newrelic_rpm", "~> 3.9"
+end
+
 group :development do
   gem "pry", "~> 0.10"
 #  gem "pry-doc", "~> 0.6"
@@ -48,11 +53,9 @@ end
 # gem "debugger", group: [:development, :test]
 
 gem "bootstrap-sass", "~> 3.2"
-gem "rails_12factor", "~> 0", group: :production
 gem "haml-rails", "~> 0.5"
 gem "devise", "~> 3.2"
 gem "dotenv-rails", "~> 0.10", :groups => [:development, :test]
-gem "newrelic_rpm", "~> 3.9", group: :production
 gem "thin", "~> 1.6"
 gem "simple-navigation", "~> 3.13"
 gem "simple-navigation-bootstrap", "~> 1.0"
