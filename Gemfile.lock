@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/vaysman/pry-doc.git
+  revision: da22b8b7f1170c424d203a4b16ab1fb73a94b0f5
+  specs:
+    pry-doc (0.8.0)
+      pry (~> 0.9)
+      yard (~> 0.8)
+
+GIT
   remote: git://github.com/vaysman/simple_form_bootstrap3.git
   revision: a264658cb9e0fa5c2cd7601b5309787c39bfd4da
   specs:
@@ -222,6 +230,7 @@ GEM
       json (>= 1.8.0)
     warden (1.2.3)
       rack (>= 1.0)
+    yard (0.8.7.4)
 
 PLATFORMS
   ruby
@@ -239,6 +248,7 @@ DEPENDENCIES
   newrelic_rpm (~> 3.9)
   pg (~> 0.17)
   pry (~> 0.10)
+  pry-doc!
   pry-rails (~> 0.3)
   r18n-rails (~> 1.1)
   rails (~> 4.1)

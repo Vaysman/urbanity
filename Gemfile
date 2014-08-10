@@ -9,7 +9,7 @@ end
 
 group :development do
   gem "pry", "~> 0.10"
-#  gem "pry-doc", "~> 0.6"
+  gem "pry-doc", github: "vaysman/pry-doc"
 #   gem "pry-stack_explorer", "~> 0.4"
 #   gem "pry-debugger", "~> 0.2"
 end
