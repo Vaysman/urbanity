@@ -8,8 +8,25 @@ group :production do
 end
 
 group :development do
+  gem "spring", "~> 1.1"
+  gem "spring-commands-rspec", "~> 1.0"
+  # Spring speeds up development by keeping your application running in the background.
+  # Read more: https://github.com/rails/spring
+end
+
+group :test do
+  gem "shoulda-matchers", "~> 2.6", :group => :test, require: false
+  gem "coveralls", "~> 0.7", :groups => :test, require: false
+  gem "codeclimate-test-reporter", "~> 0.4", group: :test, require: false
+end
+
+group :development, :test do
   gem "pry", "~> 0.10"
   gem "pry-doc", github: "vaysman/pry-doc"
+  gem "pry-rails", "~> 0.3"
+  gem "dotenv-rails", "~> 0.10"
+  gem "rspec-rails", "~> 3.0.0"
+  gem "rspec-activemodel-mocks", "~> 1.0"
 #   gem "pry-stack_explorer", "~> 0.4"
 #   gem "pry-debugger", "~> 0.2"
 end
@@ -55,11 +72,9 @@ end
 gem "bootstrap-sass", "~> 3.2"
 gem "haml-rails", "~> 0.5"
 gem "devise", "~> 3.2"
-gem "dotenv-rails", "~> 0.10", :groups => [:development, :test]
 gem "thin", "~> 1.6"
 gem "simple-navigation", "~> 3.13"
 gem "simple-navigation-bootstrap", "~> 1.0"
-gem "pry-rails", "~> 0.3", :group => :development
 gem "draper", "~> 1.3"
 #gem "simple_form", github: "plataformatec/simple_form"
 # TODO
@@ -67,14 +82,4 @@ gem "draper", "~> 1.3"
 # need check
 gem "simple_form", "~> 3.0"
 gem "simple_form_bootstrap3", github: "vaysman/simple_form_bootstrap3"
-# Spring speeds up development by keeping your application running in the background.
-# Read more: https://github.com/rails/spring
-gem "spring", "~> 1.1", group: :development
 gem "r18n-rails", "~> 1.1"
-
-gem "rspec-rails", "~> 3.0.0", :groups => [:development, :test]
-gem "spring-commands-rspec", "~> 1.0", :group => :development
-gem "shoulda-matchers", "~> 2.6", :group => :test, require: false
-gem "coveralls", "~> 0.7", :groups => :test, require: false
-gem "rspec-activemodel-mocks", "~> 1.0", :groups => [:development, :test]
-gem "codeclimate-test-reporter", "~> 0.4", group: :test, require: nil
