@@ -1,11 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe WelcomeController, :type => :controller do
+RSpec.describe WelcomeController, type: :controller do
   context "user not logged in" do
-    before do
-      sign_out :user
-    end
-
     describe "GET index" do
       it "returns http success" do
         get :index
@@ -20,13 +16,7 @@ RSpec.describe WelcomeController, :type => :controller do
   end
 
   context "user logged in" do
-    before do
-      @request.env["devise.mapping"] = Devise.mappings[:user]
-      user = User.new
-      user.confirmation_sent_at = Time.now
-      user.confirm!
-      sign_in :user, user
-    end
+    login_user
 
     describe "GET index" do
       it "redirect to games" do
