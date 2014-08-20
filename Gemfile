@@ -29,6 +29,7 @@ group :development, :test do
   gem "rspec-rails", "~> 3.0.0"
   gem "rspec-activemodel-mocks", "~> 1.0"
   gem "factory_girl_rails", "~> 4.0"
+  gem "ffaker", "~> 1.25"
 #   gem "pry-stack_explorer", "~> 0.4"
 #   gem "pry-debugger", "~> 0.2"
 end

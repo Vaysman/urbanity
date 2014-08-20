@@ -92,6 +92,7 @@ GEM
     factory_girl_rails (4.4.1)
       factory_girl (~> 4.4.0)
       railties (>= 3.0.0)
+    ffaker (1.25.0)
     haml (4.0.5)
       tilt
     haml-rails (0.5.3)
@@ -251,6 +252,7 @@ DEPENDENCIES
   dotenv-rails (~> 0.10)
   draper (~> 1.3)
   factory_girl_rails (~> 4.0)
+  ffaker (~> 1.25)
   haml-rails (~> 0.5)
   jquery-rails (~> 3.1)
   newrelic_rpm (~> 3.9)
