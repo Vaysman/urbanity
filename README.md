@@ -14,3 +14,4 @@ Other bages
 [![Dependency Status](https://gemnasium.com/Vaysman/urbanity.png)](https://gemnasium.com/Vaysman/urbanity)
 [![Coverage Status](https://coveralls.io/repos/Vaysman/urbanity/badge.png)](https://coveralls.io/r/Vaysman/urbanity)
 [![Build Status](https://travis-ci.org/Vaysman/urbanity.svg?branch=master)](https://travis-ci.org/Vaysman/urbanity)
+[![Codeship Status for Vaysman/urbanity](https://www.codeship.io/projects/503bb000-0b8d-0132-22a0-72230f3fc4ea/status)](https://www.codeship.io/projects/32017)
