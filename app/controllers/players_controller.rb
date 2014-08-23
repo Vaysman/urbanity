@@ -1,4 +1,6 @@
 class PlayersController < ApplicationController
+  before_action :authenticate_user!  
+
   include CurrentPlayer
 
   before_action do
@@ -27,5 +29,4 @@ class PlayersController < ApplicationController
   def player_params
     params.require("player").permit("first_name", "last_name", "bio")
   end
-
 end

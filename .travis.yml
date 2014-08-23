@@ -13,6 +13,7 @@ env:
   - DB=postgresql CODECLIMATE_REPO_TOKEN=fe9e6aace00a06a5afc0f786d665cd1714113884493db130bb4cfc49bfab2e25
   
 bundler_args: -j 5 --without development production --deployment
+
 cache: bundler
 
 script:
