@@ -68,7 +68,11 @@ describe PlayerDecorator do
       user = double("user")
       player = double("user")
       allow(player).to receive(:user) { user }
-      allow(user).to receive(:email) { mail }
+      allow(user).to receive(:email) { "email" }
+
+      it = PlayerDecorator.new(player)
+
+      expect(it.email).to eq("email")
     end
   end
 end
