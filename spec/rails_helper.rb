@@ -8,11 +8,13 @@ require "codeclimate-test-reporter"
 require "simplecov"
 require "coveralls"
 
-SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
-  Coveralls::SimpleCov::Formatter,
-  SimpleCov::Formatter::HTMLFormatter,
-  CodeClimate::TestReporter::Formatter
-]
+travis = ENV["TRAVIS"]
+formatters = []
+formatters << Coveralls::SimpleCov::Formatter if travis
+formatters << SimpleCov::Formatter::HTMLFormatter if !travis
+formatters << CodeClimate::TestReporter::Formatter if travis
+
+SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[*formatters]
 
 SimpleCov.start 'rails'
 
