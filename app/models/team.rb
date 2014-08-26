@@ -4,5 +4,7 @@ class Team < ActiveRecord::Base
   has_many :members, class_name: Player
   has_many :invitations
   has_many :invitees, class_name: Player, through: :invitations, source: :player
+
+  validates :name, :captain, presence: true
 end
 
