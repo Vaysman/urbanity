@@ -26,7 +26,7 @@ group :development, :test do
   gem "pry-doc", github: "vaysman/pry-doc"
   gem "pry-rails", "~> 0.3"
   gem "dotenv-rails", "~> 0.10"
-  gem "rspec-rails", "~> 3.0.0"
+  gem "rspec-rails", "~> 3.0"
   gem "rspec-activemodel-mocks", "~> 1.0"
   gem "factory_girl_rails", "~> 4.0"
   gem "ffaker", "~> 1.25"
