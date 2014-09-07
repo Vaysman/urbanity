@@ -3,7 +3,7 @@ FactoryGirl.define do
     first_name "Vasya"
     last_name "Pupkin"
     bio "Made by Factory Girl"
-    nick "vp"
+    sequence(:nick) { |n| "vp#{n}" }
     association :user, factory: :user_confirmed
   end
 end
