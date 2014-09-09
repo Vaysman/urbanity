@@ -38,4 +38,6 @@ Urbanity::Application.configure do
     :authentication => :plain
   }
   config.action_mailer.delivery_method = :smtp
+
+  config.action_controller.action_on_unpermitted_parameters = :raise
 end
