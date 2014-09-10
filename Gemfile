@@ -2,6 +2,8 @@ source "https://rubygems.org"
 
 ruby "2.1.2"
 
+gem "bundler", "~> 1.7"
+
 group :production do
   gem "rails_12factor", "~> 0"
   gem "newrelic_rpm", "~> 3.9"
