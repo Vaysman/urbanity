@@ -16,7 +16,7 @@ class PlayersController < ApplicationController
   end
 
   def update
-    if @current_player.update(player_params)
+    if player.update(player_params)
       redirect_to player_path, notice: 'Player was successfully updated.'
     else
       render :edit
@@ -25,7 +25,6 @@ class PlayersController < ApplicationController
 
   private
 
-  # Only allow a trusted parameter "white list" through.
   def player_params
     params.require("player").permit("first_name", "last_name", "bio")
   end
