@@ -1,19 +1,15 @@
 require 'rails_helper'
 
-# Specs in this file have access to a helper object that includes
-# the ApplicationHelper. For example:
-#
-# describe ApplicationHelper do
-#   describe "string concat" do
-#     it "concats two strings with spaces" do
-#       expect(helper.concat_strings("this","that")).to eq("this that")
-#     end
-#   end
-# end
 RSpec.describe ApplicationHelper, :type => :helper do
   describe "#section_title" do
-    it "returns No title with title is not set" do
+    it "returns No title when title is not set" do
       expect(helper.section_title).to eq("No title")
+    end
+
+    it "returns content_for title when title is set" do
+      title = double("Title")
+      allow(helper).to receive(:content_for).with(:title).and_return(title)
+      expect(helper.section_title).to eq(title)
     end
   end
 end
