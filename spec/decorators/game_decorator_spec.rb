@@ -25,4 +25,10 @@ describe GameDecorator do
       expect(it.registred_team_count).to eq(5)
     end
   end
+
+  describe "#registred_teams_list" do
+    it "returns list of 5 teams" do
+      expect(it.registred_teams_list).to match(/Team 5/)
+    end
+  end
 end
