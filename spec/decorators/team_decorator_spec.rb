@@ -5,8 +5,10 @@ describe TeamDecorator do
   let(:it) { TeamDecorator.new(team) }
 
   describe "#size" do
-    allow(team).to receive(:members).and_return(Array.new(1))
+    it "returns number of team members" do
+      allow(team).to receive(:members).and_return(Array.new(1))
 
-    expect(it.size).to eq(1)
+      expect(it.size).to eq(1)
+    end
   end
 end
