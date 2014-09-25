@@ -11,11 +11,11 @@ class GameDecorator < Draper::Decorator
     format_timedate(object.registration_end)
   end
 
-  def registred_teams_count
+  def registered_team_count
     5
   end
 
-  def registred_teams_list
+  def registered_teams_list
     h.content_tag(:div, class: "list-group") {
       ((1..5).map { |i| team_line(i)}).join.html_safe
     }
