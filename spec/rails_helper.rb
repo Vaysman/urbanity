@@ -76,5 +76,5 @@ RSpec.configure do |config|
     end
   end
   
-  Draper::ViewContext.test_strategy :fast
+  # Draper::ViewContext.test_strategy :fast
 end
