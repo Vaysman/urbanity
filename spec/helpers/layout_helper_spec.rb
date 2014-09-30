@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe ApplicationHelper, :type => :helper do
+describe LayoutHelper, :type => :helper do
   describe "#section_title" do
     it "returns No title when title is not set" do
       expect(helper.section_title).to eq("No title")
