@@ -6,7 +6,6 @@ require "rspec/rails"
 require "shoulda/matchers"
 require "codeclimate-test-reporter"
 require "simplecov"
-require "coveralls"
 
 travis = ENV["TRAVIS"]
 ci = ENV["CI"]
