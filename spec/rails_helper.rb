@@ -11,7 +11,6 @@ require "coveralls"
 travis = ENV["TRAVIS"]
 ci = ENV["CI"]
 formatters = []
-formatters << Coveralls::SimpleCov::Formatter if travis
 formatters << SimpleCov::Formatter::HTMLFormatter if !ci
 formatters << CodeClimate::TestReporter::Formatter if travis
 

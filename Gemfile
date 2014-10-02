@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "2.1.2"
+ruby "2.1.3"
 
 gem "bundler", "~> 1.7"
 
@@ -18,7 +18,6 @@ end
 
 group :test do
   gem "shoulda-matchers", "~> 2.6", :group => :test, require: false
-  gem "coveralls", "~> 0.7", :groups => :test, require: false
   gem "codeclimate-test-reporter", "~> 0.4", group: :test, require: false
   gem "database_cleaner", "~> 1.3"
 end
