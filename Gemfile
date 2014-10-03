@@ -17,6 +17,7 @@ group :development do
 end
 
 group :test do
+  gem 'simplecov', "~> 0.9", :require => false
   gem "shoulda-matchers", "~> 2.6", :group => :test, require: false
   gem "codeclimate-test-reporter", "~> 0.4", group: :test, require: false
   gem "database_cleaner", "~> 1.3"

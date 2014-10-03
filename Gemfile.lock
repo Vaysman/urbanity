@@ -257,6 +257,7 @@ DEPENDENCIES
   simple-navigation-bootstrap (~> 1.0)
   simple_form (~> 3.0)
   simple_form_bootstrap3!
+  simplecov (~> 0.9)
   spring (~> 1.1)
   spring-commands-rspec (~> 1.0)
   thin (~> 1.6)
