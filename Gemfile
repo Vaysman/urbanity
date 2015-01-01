@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "2.1.3"
+ruby "2.2.0"
 
 gem "bundler", "~> 1.7"
 
@@ -77,6 +77,7 @@ end
 gem "bootstrap-sass", "~> 3.2"
 gem "haml-rails", "~> 0.5"
 gem "devise", "~> 3.2"
+#gem "eventmachine", "1.0.4"
 gem "thin", "~> 1.6"
 gem "simple-navigation", "~> 3.13"
 gem "simple-navigation-bootstrap", "~> 1.0"
@@ -87,5 +88,5 @@ gem "draper", "~> 1.3"
 # need check
 gem "simple_form", "~> 3.0"
 gem "simple_form_bootstrap3", github: "vaysman/simple_form_bootstrap3"
-gem "r18n-rails", "~> 1.1"
+#gem "r18n-rails", "~> 1.1"
 gem "keynote", "~> 0.2"
