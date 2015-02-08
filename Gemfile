@@ -43,7 +43,7 @@ gem "rails", "~> 4.1"
 gem "pg", "~> 0.17"
 
 # Use SCSS for stylesheets
-gem "sass-rails", "~> 4.0"
+gem "sass-rails", "~> 5.0"
 
 # Use Uglifier as compressor for JavaScript assets
 gem "uglifier", "~> 2.5"
@@ -55,7 +55,7 @@ gem "coffee-rails", "~> 4.0"
 # gem "therubyracer", platforms: :ruby
 
 # Use jquery as the JavaScript library
-gem "jquery-rails", "~> 3.1"
+gem "jquery-rails", "~> 4.0"
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -86,7 +86,7 @@ gem "draper", "~> 1.3"
 # TODO
 # alternative solution
 # need check
-gem "simple_form", "~> 3.0"
-gem "simple_form_bootstrap3", github: "vaysman/simple_form_bootstrap3"
+gem "simple_form", "~> 3.1"
+gem "simple_form_bootstrap3"
 #gem "r18n-rails", "~> 1.1"
 gem "keynote", "~> 0.2"
